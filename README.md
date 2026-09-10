@@ -62,15 +62,6 @@ npm run dev
 
 Open **http://localhost:5173** in your browser.
 
-## Role-Based Architecture & Credentials
-
-| Role       | Login Portal | Dashboard                 | Capabilities                                                                                                                                           | Seeded Email                   | Seeded Password |
-|------------|--------------|---------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------|-----------------|
-| **Admin**  | `/login`     | `/admin`                  | Full system overview. Manage staff accounts (Host/Frontdesk). View comprehensive check logs & stats. Export visitor logs to CSV.                       | `admin@visitorpass.com`        | `Admin@1234`    |
-| **Host**   | `/login`     | `/host`                   | View assigned appointments. Approve or Reject pending visitor requests.                                                                                | `deepika@visitorpass.com`      | `Host@Pass1`    |
-| **Frontdesk** | `/login`  | `/frontdesk`              | See approved appointments. Issue visitor passes (generates QR/PDF). Check-in and Check-out visitors via built-in QR scanner or manual Pass ID entry.   | `priya.fd@visitorpass.com`     | `Frontdesk@1`   |
-| **Visitor**| Public       | `/pre-register` / `/check-status` | No login required. Pre-register for a visit (select Host & upload photo). Check pass status using email. Download PDF badge.                   | *No predefined login required* | *N/A*           |
-
 ## Key Features Implemented
 
 - **Dynamic Role-Based Login:** A unified login interface that securely authenticates staff roles while intelligently redirecting public visitors to the tracking portal.
