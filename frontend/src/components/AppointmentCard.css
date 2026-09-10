@@ -1,0 +1,101 @@
+.appt-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 1.25rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.appt-card:hover {
+  border-color: rgba(99,102,241,0.4);
+  transform: translateY(-1px);
+}
+
+.appt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.appt-visitor-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin: 0;
+}
+
+.appt-company {
+  font-size: 0.82rem;
+  color: #64748b;
+  margin: 0.2rem 0 0;
+}
+
+.status-badge {
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+.status-pending  { background: rgba(245,158,11,0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.3); }
+.status-approved { background: rgba(16,185,129,0.15); color: #34d399; border: 1px solid rgba(16,185,129,0.3); }
+.status-rejected { background: rgba(239,68,68,0.15);  color: #f87171; border: 1px solid rgba(239,68,68,0.3); }
+.status-completed { background: rgba(99,102,241,0.15); color: #818cf8; border: 1px solid rgba(99,102,241,0.3); }
+
+.appt-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.appt-detail-item {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 0.88rem;
+  color: #94a3b8;
+}
+
+.detail-label {
+  min-width: 110px;
+  color: #64748b;
+}
+
+.appt-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.btn-approve,
+.btn-reject {
+  padding: 0.45rem 1.1rem;
+  border-radius: 7px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+.btn-approve {
+  background: rgba(16,185,129,0.2);
+  color: #34d399;
+  border: 1px solid rgba(16,185,129,0.4);
+}
+
+.btn-reject {
+  background: rgba(239,68,68,0.15);
+  color: #f87171;
+  border: 1px solid rgba(239,68,68,0.35);
+}
+
+.btn-approve:hover { background: rgba(16,185,129,0.35); }
+.btn-reject:hover  { background: rgba(239,68,68,0.3); }
+
+.btn-approve:disabled,
+.btn-reject:disabled { opacity: 0.5; cursor: not-allowed; }
